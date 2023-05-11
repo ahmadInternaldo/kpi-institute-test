@@ -70,10 +70,14 @@ export class UserService {
   }
 
   async remove(id: string): Promise<ResponseUserInterface> {
-    await this.userModel.findByIdAndDelete(id).exec();
-    return {
-      message: 'delete success',
-      statusCode: 200,
-    };
+    try {
+      await this.userModel.findByIdAndDelete(id).exec();
+      return {
+        message: 'delete success',
+        statusCode: 200,
+      };
+    } catch (error) {
+      throw new UnprocessableEntityException('Data cannot be processed');
+    }
   }
 }

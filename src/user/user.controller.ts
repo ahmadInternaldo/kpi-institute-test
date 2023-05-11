@@ -7,6 +7,7 @@ import {
   Param,
   Delete,
   HttpCode,
+  HttpStatus,
 } from '@nestjs/common';
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
@@ -18,7 +19,7 @@ import { UserInterface } from './interfaces/user.interface';
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
-  @HttpCode(200)
+  @HttpCode(HttpStatus.OK)
   @Post('user')
   async create(
     @Body() createUserDto: CreateUserDto,
