@@ -12,10 +12,10 @@ export class Skill extends Document implements SkillInterface {
   skill_name: string;
 
   @Prop({ type: Types.ObjectId, ref: 'User' })
-  user: User;
+  users: User[];
 
   @Prop({ type: Types.ObjectId, ref: 'Activity' })
-  activity: Activity;
+  activity: Activity[];
 }
 
 export const SkillSchema = SchemaFactory.createForClass(Skill);

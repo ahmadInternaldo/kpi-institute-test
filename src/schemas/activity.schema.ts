@@ -20,8 +20,14 @@ export class Activity extends Document implements ActivityInterface {
   @Prop()
   end_date: Date;
 
+  @Prop()
+  skill_id: string;
+
+  @Prop()
+  skill_name: string;
+
   @Prop({ type: [{ type: Types.ObjectId, ref: 'User' }] })
-  users: User[];
+  participants: User[];
 
   @Prop({ type: Types.ObjectId, ref: 'Skill' })
   skill: Skill;

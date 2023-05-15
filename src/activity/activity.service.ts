@@ -20,44 +20,37 @@ export class ActivityService {
   async create(
     createActivityDto: CreateActivityDto,
   ): Promise<ResponseActivityInterface> {
-    const activity = await this.activityModel.findOne(createActivityDto).exec();
+    try {
+      const activity = await this.activityModel
+        .findOne(createActivityDto)
+        .exec();
 
-    if (activity) {
-      throw new UnprocessableEntityException('Data Cannot be processed');
-    } else {
-      await this.activityModel.create(createActivityDto);
-      return {
-        statusCode: HttpStatus.OK,
-        message: 'create success',
-        error: '',
-      };
+      if (activity) {
+        throw new UnprocessableEntityException('Data Cannot be processed');
+      } else {
+        await this.activityModel.create(createActivityDto);
+        return {
+          statusCode: HttpStatus.OK,
+          message: 'create success',
+          error: '',
+        };
+      }
+    } catch (error) {
+      console.log(error);
     }
   }
 
-  async findAll(): Promise<ResponseActivityInterface> {
-    const activities = await this.activityModel.find().exec();
-    if (!activities.length) {
-      throw new UnprocessableEntityException('Data Cannot be processed');
-    } else {
-      return {
-        statusCode: HttpStatus.OK,
-        message: activities,
-        error: '',
-      };
-    }
-  }
-
-  async findOne(id: string): Promise<ResponseActivityInterface> {
-    const activity = await this.activityModel.findById(id).exec();
-    if (!activity) {
-      throw new UnprocessableEntityException('Data Cannot be processed');
-    } else {
-      return {
-        statusCode: HttpStatus.OK,
-        message: activity,
-        error: '',
-      };
-    }
+  async findAll(id: string): Promise<ResponseActivityInterface> {
+    const activities = await this.activityModel
+      .find({
+        _id: { $gte: id },
+      })
+      .exec();
+    return {
+      statusCode: HttpStatus.OK,
+      message: activities,
+      error: '',
+    };
   }
 
   async update(

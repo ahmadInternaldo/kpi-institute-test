@@ -5,7 +5,9 @@ import { Activity } from './activity.schema';
 import { Skill } from './skill.schema';
 import { UserInterface } from '../user/interfaces/user.interface';
 
-@Schema()
+@Schema({
+  timestamps: true,
+})
 export class User extends Document implements UserInterface {
   @Prop({ required: true })
   name: string;
@@ -23,7 +25,7 @@ export class User extends Document implements UserInterface {
   profile: Profile;
 
   @Prop({ type: [{ type: Types.ObjectId, ref: 'Activity' }] })
-  activities: Activity[];
+  activities?: Activity[];
 
   @Prop({ type: Types.ObjectId, ref: 'Skill' })
   skill: Skill;
