@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "6462104ceef2ad496e40fae9"
+  },
+  "skill_name": "blacksmith",
+  "users": [],
+  "createdAt": {
+    "$date": "2023-05-15T10:58:20.786Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-15T10:58:20.786Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "64620f4cf5f9913fab74b478"
+  },
+  "profile_name": "competitor",
+  "createdAt": {
+    "$date": "2023-05-15T10:54:04.898Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-15T10:58:20.791Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64621071eef2ad496e40faf2"
+  },
+  "profile_name": "expert",
+  "createdAt": {
+    "$date": "2023-05-15T10:58:57.620Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-15T10:58:57.623Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64621081eef2ad496e40fafc"
+  },
+  "profile_name": "board",
+  "createdAt": {
+    "$date": "2023-05-15T10:59:13.143Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-15T10:59:13.145Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6462108feef2ad496e40fb05"
+  },
+  "profile_name": "trainer",
+  "createdAt": {
+    "$date": "2023-05-15T10:59:27.703Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-15T10:59:27.705Z"
+  },
+  "__v": 0
+}]

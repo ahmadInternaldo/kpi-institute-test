@@ -1,3 +1,6 @@
+import { UserInterface } from 'src/user/interfaces/user.interface';
+
 export interface SkillInterface {
-  skillName: string;
+  skill_name: string;
+  users: UserInterface[];
 }
