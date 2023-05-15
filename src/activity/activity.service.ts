@@ -6,7 +6,7 @@ import {
 import { CreateActivityDto } from './dto/create-activity.dto';
 import { UpdateActivityDto } from './dto/update-activity.dto';
 import { InjectModel } from '@nestjs/mongoose';
-import { Activity } from './schemas/activity.schema';
+import { Activity } from '../schemas/activity.schema';
 import * as mongoose from 'mongoose';
 import { ResponseActivityInterface } from './interfaces/response-activity.interface';
 

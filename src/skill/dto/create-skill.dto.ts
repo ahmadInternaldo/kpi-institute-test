@@ -5,5 +5,5 @@ export class CreateSkillDto implements SkillInterface {
   @IsNotEmpty({
     message: `skill's cannot be empty`,
   })
-  skillName: string;
+  skill_name: string;
 }

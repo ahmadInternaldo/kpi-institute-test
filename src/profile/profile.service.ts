@@ -6,7 +6,7 @@ import {
 import { CreateProfileDto } from './dto/create-profile.dto';
 import { UpdateProfileDto } from './dto/update-profile.dto';
 import { InjectModel } from '@nestjs/mongoose';
-import { Profile } from './schemas/profile.schema';
+import { Profile } from '../schemas/profile.schema';
 import * as mongoose from 'mongoose';
 import { ResponseProfileInterface } from './interfaces/response-profile.interface';
 

@@ -1,6 +1,6 @@
 export interface ActivityInterface {
   title: string;
   description: string;
-  startDate: Date;
-  endDate: Date;
+  start_date: Date;
+  end_date: Date;
 }

@@ -5,5 +5,5 @@ export class CreateProfileDto implements ProfileInterface {
   @IsNotEmpty({
     message: `profile's name cannot be empty`,
   })
-  profileName: string;
+  profile_name: string;
 }

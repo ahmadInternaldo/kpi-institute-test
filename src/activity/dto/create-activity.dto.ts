@@ -15,10 +15,10 @@ export class CreateActivityDto implements ActivityInterface {
   @IsNotEmpty({
     message: 'start date cannot be empty',
   })
-  startDate: Date;
+  start_date: Date;
 
   @IsNotEmpty({
     message: 'end date cannot be empty',
   })
-  endDate: Date;
+  end_date: Date;
 }
