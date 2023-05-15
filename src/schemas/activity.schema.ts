@@ -2,7 +2,7 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
 import { User } from './user.schema';
 import { Skill } from './skill.schema';
-import { ActivityInterface } from 'src/activity/interfaces/activity.interface';
+import { ActivityInterface } from '../activity/interfaces/activity.interface';
 
 @Schema({
   timestamps: true,

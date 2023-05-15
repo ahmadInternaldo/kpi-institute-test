@@ -2,9 +2,11 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
 import { User } from './user.schema';
 import { Activity } from './activity.schema';
-import { SkillInterface } from 'src/skill/interfaces/skill.interface';
+import { SkillInterface } from '../skill/interfaces/skill.interface';
 
-@Schema()
+@Schema({
+  timestamps: true,
+})
 export class Skill extends Document implements SkillInterface {
   @Prop({ required: true })
   skill_name: string;

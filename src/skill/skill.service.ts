@@ -7,7 +7,7 @@ import { CreateSkillDto } from './dto/create-skill.dto';
 import { UpdateSkillDto } from './dto/update-skill.dto';
 import { InjectModel } from '@nestjs/mongoose';
 import { Skill } from '../schemas/skill.schema';
-import * as mongoose from 'mongoose';
+import mongoose from 'mongoose';
 import { ResponseSkillInterface } from './interfaces/response-skill.interface';
 
 @Injectable()

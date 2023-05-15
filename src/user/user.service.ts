@@ -9,8 +9,8 @@ import { InjectModel } from '@nestjs/mongoose';
 import * as mongoose from 'mongoose';
 import { UserInterface } from './interfaces/user.interface';
 import { ResponseUserInterface } from './interfaces/response-user.interface';
-import { matching } from 'utils/bcrypt';
-import { User } from 'src/schemas/user.schema';
+import { matching } from '../utils/bcrypt';
+import { User } from '../schemas/user.schema';
 
 @Injectable()
 export class UserService {

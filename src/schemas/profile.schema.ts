@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
 import { User } from './user.schema';
-import { ProfileInterface } from 'src/profile/interfaces/profile.interface';
+import { ProfileInterface } from '../profile/interfaces/profile.interface';
 
 @Schema({
   timestamps: true,

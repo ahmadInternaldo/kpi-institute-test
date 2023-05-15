@@ -3,10 +3,10 @@ import { InjectModel } from '@nestjs/mongoose';
 import mongoose from 'mongoose';
 import { LoginDto } from './dto/login.dto';
 import { ResponseLoginInterface } from './interfaces/response-login.interface';
-import { matching } from 'utils/bcrypt';
+import { matching } from '../utils/bcrypt';
 import { LogoutDto } from './dto/logout.dto';
 import { ResponseLogoutInterface } from './interfaces/response-logout.interface';
-import { User } from 'src/schemas/user.schema';
+import { User } from '../schemas/user.schema';
 
 @Injectable()
 export class AuthService {

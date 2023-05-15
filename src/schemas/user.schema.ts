@@ -3,7 +3,7 @@ import { Document, Types } from 'mongoose';
 import { Profile } from './profile.schema';
 import { Activity } from './activity.schema';
 import { Skill } from './skill.schema';
-import { UserInterface } from 'src/user/interfaces/user.interface';
+import { UserInterface } from '../user/interfaces/user.interface';
 
 @Schema()
 export class User extends Document implements UserInterface {
